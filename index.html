@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReserveIQ - Prevent Reserve Fund Crises Before They Happen</title>
+    <meta name="description" content="ReserveIQ helps condo boards avoid special assessments with AI-powered reserve fund tools, calculators, and compliance tracking.">
+    <meta name="keywords" content="condo reserve fund, special assessment calculator, condo compliance, reserve study analysis, property management software">
+    <meta property="og:title" content="ReserveIQ - Prevent Reserve Fund Crises Before They Happen">
+    <meta property="og:description" content="AI-powered platform that helps condo boards avoid $50,000+ emergency assessments through smart reserve fund management.">
+    <meta property="og:type" content="website">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            overflow-x: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 25%, #2563eb 50%, #10b981 100%);
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 8px 32px rgba(30, 58, 138, 0.3);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .logo-symbol {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+            color: white;
+            position: relative;
+        }
+        
+        .logo-symbol::after {
+            content: '📊';
+            position: absolute;
+            font-size: 1.2rem;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-main {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        
+        .logo-main .logo-q {
+            color: #10b981;
+        }
+        
+        .logo-tagline {
+            font-size: 0.75rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+        }
+        
+        .nav-link:hover {
+            color: white;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+            border: 2px solid transparent;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(245, 158, 11, 0.5);
+        }
+        
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.3);
+        }
+        
+        .hero {
+            background: #1e3a8a;
+            color: white;
+            padding: 6rem 2rem 8rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-main {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            border: none;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            text-transform: none;
+            letter-spacing: normal;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: white;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+        
+        .social-proof {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .social-proof-text {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+        }
+        
+        .stats-preview {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #10b981;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .risk-free {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 1rem;
+        }
+        
+        .section {
+            padding: 5rem 2rem;
+        }
+        
+        .section-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+            line-height: 1.2;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #6b7280;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .problem-section {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #f59e0b 100%);
+            position: relative;
+        }
+        
+        .problem-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(0,0,0,0.1)"/></svg>') repeat;
+            opacity: 0.1;
+        }
+        
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .problem-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-left: 5px solid #f59e0b;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .problem-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #f59e0b, #d97706);
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        
+        .problem-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        
+        .problem-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .problem-description {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .problem-cost {
+            font-weight: 700;
+            color: #dc2626;
+            font-size: 1.1rem;
+        }
+        
+        .solution-section {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(30, 58, 138, 0.1);
+            border: 1px solid rgba(30, 58, 138, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #1e3a8a, #10b981);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 48px rgba(30, 58, 138, 0.15);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1e3a8a, #10b981);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .feature-description {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+        
+        .calculator-section {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+            color: white;
+        }
+        
+        .calculator-section .section-title {
+            color: white;
+        }
+        
+        .calculator-section .section-subtitle {
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .calculator-container {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 3rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            margin-top: 3rem;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 25%, #2563eb 50%, #10b981 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 2rem 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-text {
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-link {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-link:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 2rem;
+            opacity: 0.6;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stats-preview {
+                gap: 2rem;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-symbol">R</div>
+                <div class="logo-text">
+                    <div class="logo-main">Reserve<span class="logo-q">IQ</span></div>
+                    <div class="logo-tagline">AI-Powered Condo Intelligence</div>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#calculator" class="nav-link">Get Started</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#" class="btn btn-secondary">Sign In</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-main">
+                <div class="hero-badge">✨ Crisis Prevention Guarantee</div>
+                <h1 class="hero-title">Prevent Reserve Fund or Any Operational Crises Before They Happen in Your Building</h1>
+                <p class="hero-subtitle">AI-powered platform that helps condo boards avoid $50,000+ emergency assessments through smart reserve fund management and compliance tracking.</p>
+                <div class="hero-buttons">
+                    <a href="#calculator" class="btn btn-primary">Get Started Now</a>
+                </div>
+                <div class="risk-free">✓ No credit card required • ✓ Cancel anytime • ✓ Full money-back guarantee</div>
+            </div>
+            
+            <div class="social-proof">
+                <div class="social-proof-text">The first AI-powered platform designed to prevent condo reserve crises</div>
+                <div class="stats-preview">
+                    <div class="stat-item">
+                        <span class="stat-number">$50K+</span>
+                        <span class="stat-label">Avg crisis cost prevented</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Jurisdictions supported</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Crisis monitoring</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section problem-section">
+        <div class="section-content">
+            <div class="section-header">
+                <h2 class="section-title">The Hidden Crisis Threatening Your Building</h2>
+                <p class="section-subtitle">Most condo boards discover reserve fund shortfalls too late, forcing emergency assessments that devastate owners financially.</p>
+            </div>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <span class="problem-icon">🚨</span>
+                    <h3 class="problem-title">Emergency Assessments</h3>
+                    <p class="problem-description">Unexpected repairs force boards to hit owners with massive special assessments when reserve funds fall short.</p>
+                    <div class="problem-cost">Average cost: $50,000+ per unit</div>
+                </div>
+                
+                <div class="problem-card">
+                    <span class="problem-icon">⚖️</span>
+                    <h3 class="problem-title">Compliance Violations</h3>
+                    <p class="problem-description">Missed deadlines for Form 15, insurance requirements, or CAO compliance expose boards to legal liability.</p>
+                    <div class="problem-cost">Potential fines: $25,000+ per violation</div>
+                </div>
+                
+                <div class="problem-card">
+                    <span class="problem-icon">😤</span>
+                    <h3 class="problem-title">Owner Relations Crisis</h3>
+                    <p class="problem-description">Poor communication during financial emergencies leads to board conflicts, lawsuits, and management turnover.</p>
+                    <div class="problem-cost">Crisis premium: 25% higher costs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section solution-section" id="features">
+        <div class="section-content">
+            <div class="section-header">
+                <h2 class="section-title">Complete Crisis Prevention Platform</h2>
+                <p class="section-subtitle">ReserveIQ's AI-powered platform gives you the tools to prevent financial crises before they happen.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏥</div>
+                    <h3 class="feature-title">Reserve Health Scoring</h3>
+                    <p class="feature-description">AI-powered reserve fund analysis with color-coded health scoring and early warning alerts for underfunding risks before they become crises.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">Assessment Calculator</h3>
+                    <p class="feature-description">Compare funding strategies instantly: monthly increases vs. special assessments with detailed cost impact analysis and owner financial planning.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">Emergency Compliance Checker</h3>
+                    <p class="feature-description">Instant regulatory compliance validation across Ontario, BC, Florida, and Texas with automatic deadline tracking and violation prevention.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h3 class="feature-title">AI Document Analysis</h3>
+                    <p class="feature-description">Upload reserve studies and financial documents for instant AI analysis, extracting key insights, risk factors, and actionable recommendations.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Financial Dashboard</h3>
+                    <p class="feature-description">Real-time reserve fund tracking with expense categorization, budget variance alerts, and financial health monitoring for proactive management.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Crisis Communication Tools</h3>
+                    <p class="feature-description">Emergency notification templates and owner communication tools to manage crisis situations with transparency and professional guidance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section calculator-section" id="calculator">
+        <div class="section-content">
+            <div class="section-header">
+                <h2 class="section-title">Calculate Your Crisis Risk</h2>
+                <p class="section-subtitle">See exactly how much an emergency assessment would cost your building and discover better funding alternatives.</p>
+            </div>
+            
+            <div class="calculator-container">
+                <div style="text-align: center; padding: 2rem 0;">
+                    <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; color: white;">Don't Wait for a Crisis to Strike</h3>
+                    <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Most boards discover reserve fund problems when it's too late. Get ahead of potential crises with ReserveIQ's AI-powered early warning system.</p>
+                    
+                    <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                        <a href="https://123bsmart.github.io/reserveiq-platform/boards.html" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 1.2rem 2.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                            🏢 I am a Board Member
+                        </a>
+                        <a href="https://123bsmart.github.io/reserveiq-platform/" target="_blank" class="btn btn-secondary" style="font-size: 1.1rem; padding: 1.2rem 2.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                            🏘️ I am a Property Manager
+                        </a>
+                    </div>
+                    
+                    <div style="font-size: 0.9rem; opacity: 0.7; margin-top: 1rem;">
+                        Choose your role to see the platform designed specifically for your needs
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-section">
+        <div class="section-content">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Prevent Your Next Crisis?</h2>
+                <p class="cta-subtitle">Join the beta program and be among the first to experience AI-powered crisis prevention for your buildings.</p>
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                    <a href="https://123bsmart.github.io/reserveiq-platform/boards.html" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 1.2rem 2.5rem;">🏢 Board Members - Start Here</a>
+                    <a href="https://123bsmart.github.io/reserveiq-platform/" target="_blank" class="btn btn-secondary" style="font-size: 1.1rem; padding: 1.2rem 2.5rem;">🏘️ Property Managers - Start Here</a>
+                </div>
+                <div class="risk-free">✓ Beta pricing available • ✓ Personalized onboarding • ✓ Direct founder access</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-logo">ReserveIQ</div>
+            <div class="footer-text">AI-Powered Condo Intelligence Platform</div>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Features</a>
+                <a href="#" class="footer-link">Support</a>
+                <a href="#" class="footer-link">Privacy</a>
+                <a href="#" class="footer-link">Terms</a>
+            </div>
+            <div class="footer-bottom">
+                © 2025 ReserveIQ. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId && targetId !== '#') {
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Add animation effects on scroll
+        const scrollObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Observe elements for animation
+        document.querySelectorAll('.problem-card, .feature-card, .pricing-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            scrollObserver.observe(el);
+        });
+    </script>
+</body>
+</html>
