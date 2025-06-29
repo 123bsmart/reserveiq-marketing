@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReserveIQ - AI Platform That Saves Time Daily + Prevents $50K+ Financial Crises</title>
-    <meta name="description" content="The only AI platform that handles daily property management stress AND predicts reserve fund crises years before they devastate communities. Professional email templates + crisis prevention in one intelligent system.">
+    <meta name="description" content="The only AI platform that handles daily property management stress AND predicts reserve fund crises years before they devastate communities. Professional automation + crisis prevention in one intelligent system.">
     <style>
         * {
             margin: 0;
@@ -206,7 +206,6 @@
         .stat-label {
             font-size: 1rem;
             opacity: 0.9;
-            font-weight: 500;
         }
         
         .cta-selector {
@@ -267,84 +266,7 @@
             line-height: 1.4;
         }
         
-        /* Audience Sections */
-        .audience-section {
-            padding: 80px 0;
-            background: white;
-        }
-        
-        .audience-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-        
-        .audience-card {
-            background: white;
-            border-radius: 16px;
-            padding: 2.5rem;
-            box-shadow: 0 6px 30px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-            border: 2px solid #f1f5f9;
-        }
-        
-        .audience-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
-        }
-        
-        .audience-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #1e3a8a 0%, #10b981 100%);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .audience-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1e3a8a;
-            margin-bottom: 1rem;
-        }
-        
-        .audience-description {
-            color: #64748b;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-        
-        .feature-list {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-        
-        .feature-list li {
-            padding: 0.75rem 0;
-            color: #475569;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-        
-        .feature-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #10b981;
-            font-weight: bold;
-        }
-        
-        /* Solutions Section */
-        .solutions {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            padding: 80px 0;
-        }
-        
+        /* Section Styles */
         .section-title {
             text-align: center;
             font-size: 2.8rem;
@@ -363,49 +285,108 @@
             margin-right: auto;
         }
         
-        .solutions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-        
-        .solution-card {
+        /* Dual Power Section */
+        .dual-power {
+            padding: 80px 0;
             background: white;
+        }
+        
+        .power-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+        
+        .power-card {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
             border-radius: 16px;
-            padding: 2.5rem;
-            box-shadow: 0 6px 30px rgba(0,0,0,0.08);
-            border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 3rem;
+            text-align: center;
+            border: 2px solid #3b82f6;
         }
         
-        .solution-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+        .power-card.prevention {
+            background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+            border-color: #10b981;
         }
         
-        .solution-icon {
-            font-size: 2.5rem;
+        .power-icon {
+            font-size: 4rem;
             margin-bottom: 1.5rem;
-            display: block;
         }
         
-        .solution-title {
-            font-size: 1.4rem;
+        .power-title {
+            font-size: 2rem;
             font-weight: 700;
             color: #1e3a8a;
             margin-bottom: 1rem;
         }
         
-        .solution-description {
+        .power-subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #3b82f6;
+            margin-bottom: 1rem;
+        }
+        
+        .power-card.prevention .power-subtitle {
+            color: #059669;
+        }
+        
+        .power-description {
             color: #64748b;
+            margin-bottom: 2rem;
             line-height: 1.6;
         }
         
-        /* Competitive Advantage */
-        .advantage {
-            padding: 80px 0;
-            text-align: center;
+        .power-stats {
             background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            text-align: center;
+        }
+        
+        .stat-item {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #3b82f6;
+        }
+        
+        .power-card.prevention .stat-item {
+            color: #059669;
+        }
+        
+        .stat-item-label {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+        
+        .power-cta {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .power-card.prevention .power-cta {
+            background: #10b981;
+        }
+        
+        /* Why Different Section */
+        .why-different {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
         }
         
         .advantage-grid {
@@ -416,6 +397,7 @@
         }
         
         .advantage-item {
+            text-align: center;
             padding: 2rem;
         }
         
@@ -514,18 +496,6 @@
             border-color: #10b981;
         }
         
-        .file-upload {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-        
-        .file-upload label {
-            font-size: 0.9rem;
-            color: #64748b;
-            font-weight: 500;
-        }
-        
         .submit-btn {
             background: linear-gradient(135deg, #1e3a8a 0%, #10b981 100%);
             color: white;
@@ -594,448 +564,7 @@
             transform: translateY(-2px);
         }
         
-        
-        /* Quick Preview Section */
-        .quick-preview {
-            padding: 60px 0;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-        }
-        
-        .preview-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-        
-        .preview-item {
-            text-align: center;
-        }
-        
-        /* Product Showcase */
-        .product-showcase {
-            padding: 80px 0;
-            background: white;
-        }
-        
-        .showcase-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 4rem;
-            margin-top: 3rem;
-        }
-        
-        .showcase-item {
-            text-align: center;
-        }
-        
-        .mockup-container {
-            background: #f8fafc;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border: 2px solid #e2e8f0;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-        }
-        
-        .mockup-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0.75rem 1rem;
-            background: white;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            border: 1px solid #e2e8f0;
-        }
-        
-        .mockup-dots {
-            display: flex;
-            gap: 0.5rem;
-        }
-        
-        .mockup-dots span {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #cbd5e1;
-        }
-        
-        .mockup-title {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #64748b;
-        }
-        
-        .mockup-content {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            text-align: left;
-            border: 1px solid #e2e8f0;
-        }
-        
-        .dashboard-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        
-        .dashboard-header h4 {
-            color: #1e3a8a;
-            font-size: 1.1rem;
-            margin: 0;
-        }
-        
-        .status-good {
-            background: #dcfce7;
-            color: #166534;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-        
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-        
-        .risk-card {
-            padding: 1rem;
-            border-radius: 8px;
-            border: 2px solid;
-        }
-        
-        .risk-card.high {
-            background: #fef3c7;
-            border-color: #f59e0b;
-        }
-        
-        .risk-card.low {
-            background: #dcfce7;
-            border-color: #10b981;
-        }
-        
-        .building-name {
-            font-weight: 600;
-            color: #1e3a8a;
-            margin-bottom: 0.5rem;
-        }
-        
-        .risk-level {
-            font-size: 0.9rem;
-            margin-bottom: 0.25rem;
-        }
-        
-        .timeline {
-            font-size: 0.8rem;
-            color: #64748b;
-        }
-        
-        .email-preview {
-            font-family: 'Courier New', monospace;
-            font-size: 0.85rem;
-        }
-        
-        .email-header {
-            padding: 0.75rem;
-            background: #f1f5f9;
-            border-radius: 6px;
-            margin-bottom: 0.75rem;
-            color: #475569;
-        }
-        
-        .email-body {
-            color: #374151;
-            line-height: 1.5;
-        }
-        
-        .email-body p {
-            margin-bottom: 0.75rem;
-        }
-        
-        .showcase-item h3 {
-            color: #1e3a8a;
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        
-        .showcase-item p {
-            color: #64748b;
-            line-height: 1.6;
-        }
-        
-        /* Vision Section */
-        .vision-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-        }
-        
-        .vision-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        
-        .vision-quote {
-            font-size: 1.3rem;
-            color: #475569;
-            font-style: italic;
-            line-height: 1.7;
-            margin-bottom: 2rem;
-            border-left: 4px solid #10b981;
-            padding-left: 1.5rem;
-        }
-        
-        .vision-points {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        
-        .vision-point {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            color: #475569;
-        }
-        
-        .point-icon {
-            font-size: 1.2rem;
-            width: 30px;
-        }
-        
-        .credibility-stats {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-        
-        .stat-item {
-            text-align: center;
-            padding: 1.5rem;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-        
-        .stat-item .stat-number {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: #1e3a8a;
-            display: block;
-        }
-        
-        .stat-item .stat-label {
-            font-size: 0.9rem;
-            color: #64748b;
-            font-weight: 500;
-        }
-        
-        /* Story Section */
-        .story-section {
-            padding: 60px 0;
-            background: white;
-        }
-        
-        .story-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .story-text {
-            font-size: 1.1rem;
-            color: #475569;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-        
-        .story-mission {
-            font-size: 1.2rem;
-            color: #1e3a8a;
-            line-height: 1.6;
-            padding: 1.5rem;
-            background: #f0f9ff;
-            border-radius: 12px;
-            border-left: 4px solid #1e3a8a;
-        }
-        
-        /* Roadmap Section */
-        .roadmap-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-        }
-        
-        .roadmap-timeline {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .timeline-item {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            border: 2px solid transparent;
-            transition: transform 0.3s;
-        }
-        
-        .timeline-item:hover {
-            transform: translateY(-4px);
-        }
-        
-        .timeline-item.completed {
-            border-color: #10b981;
-            background: #f0fdf4;
-        }
-        
-        .timeline-item.active {
-            border-color: #f59e0b;
-            background: #fefbeb;
-        }
-        
-        .timeline-item.future {
-            border-color: #e2e8f0;
-        }
-        
-        .timeline-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .timeline-item h3 {
-            color: #1e3a8a;
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        
-        .timeline-item p {
-            color: #64748b;
-            margin-bottom: 1rem;
-            line-height: 1.5;
-        }
-        
-        .timeline-date {
-            font-size: 0.9rem;
-            color: #059669;
-            font-weight: 600;
-        }
-        
-        /* Founding Partner Section */
-        .founding-partner-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #1e3a8a 0%, #10b981 100%);
-            color: white;
-        }
-        
-        .founding-partner-section .section-title {
-            color: white;
-        }
-        
-        .founding-partner-section .section-subtitle {
-            color: rgba(255,255,255,0.9);
-        }
-        
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-        
-        .benefit-card {
-            background: white;
-            color: #333;
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .benefit-card:hover {
-            transform: translateY(-4px);
-        }
-        
-        .benefit-card.featured {
-            border: 3px solid #fbbf24;
-            box-shadow: 0 8px 30px rgba(251, 191, 36, 0.3);
-        }
-        
-        .benefit-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .benefit-card h3 {
-            color: #1e3a8a;
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-        }
-        
-        .benefit-card p {
-            color: #64748b;
-            line-height: 1.6;
-        }
-        
-        .urgency-note {
-            text-align: center;
-            margin-top: 2rem;
-            padding: 1.5rem;
-            background: rgba(255,255,255,0.1);
-            border-radius: 12px;
-            border: 2px solid rgba(251, 191, 36, 0.5);
-        }
-        
-        .urgency-note p {
-            font-size: 1.1rem;
-            margin: 0;
-            color: #fbbf24;
-        }
-        
-        /* FAQ Section */
-        .faq-section {
-            padding: 80px 0;
-            background: white;
-        }
-        
-        .faq-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .faq-item {
-            background: #f8fafc;
-            border-radius: 12px;
-            padding: 2rem;
-            border-left: 4px solid #10b981;
-        }
-        
-        .faq-item h3 {
-            color: #1e3a8a;
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-        }
-        
-        .faq-item p {
-            color: #475569;
-            line-height: 1.6;
-            margin: 0;
-        }
-        
+        /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.8rem;
@@ -1050,33 +579,7 @@
                 gap: 2rem;
             }
             
-            .preview-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .showcase-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .vision-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .roadmap-timeline {
-                grid-template-columns: 1fr;
-            }
-            
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .faq-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .advantage-grid {
+            .power-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
@@ -1105,20 +608,19 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <nav class="container nav">
+        <nav class="nav container">
             <div class="logo">
                 <div class="logo-icon"></div>
                 <div>
                     <div style="font-size: 1.8rem; font-weight: 700;">ReserveIQ</div>
-                    <div style="font-size: 0.8rem; opacity: 0.9; font-weight: 400;">AI-Powered Portfolio Intelligence Platform</div>
+                    <div style="font-size: 0.8rem; opacity: 0.9; font-weight: 400;">AI-Powered Building Intelligence</div>
                 </div>
             </div>
             <ul class="nav-links">
                 <li><a href="#solutions">Solutions</a></li>
-                <li><a href="#condos">Buildings</a></li>
-                <li><a href="#property-managers">Property Managers</a></li>
-                <li><a href="#boards">Boards</a></li>
-                <li><a href="#demo-form" class="cta-button">Get Demo</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="mailto:demo@reserveiq.dev">Contact</a></li>
+                <li><a href="#demo" class="cta-button">Get Demo</a></li>
             </ul>
         </nav>
     </header>
@@ -1129,15 +631,15 @@
             <div class="hero-content">
                 <h1>Stop Financial Disasters Before They Devastate Your Community</h1>
                 <p class="hero-subtitle">The Only AI Platform That Handles Daily Stress + Predicts $50K+ Crises Years Early</p>
-                <p class="hero-description">Professional email templates save you 5-10 hours weekly. Crisis prevention AI protects communities from devastating emergency assessments. No other platform does both.</p>
+                <p class="hero-description">Professional communication automation saves hours weekly. Crisis prevention AI protects communities from devastating emergency assessments. No other platform does both.</p>
                 <p class="hero-pm-hook">
-                    <strong>Property Managers:</strong> Transform daily email stress into professional efficiency while earning commission revenue from crisis protection services.
+                    <strong>Property Managers:</strong> Transform daily stress into professional efficiency while earning partnership revenue from crisis protection services.
                 </p>
                 
                 <!-- Founding Partner Badge -->
                 <div class="founding-partner-badge">
                     <span class="badge-icon">🚀</span>
-                    <strong>Limited Time:</strong> Founding Partner Program — Special Pricing + Revenue Share
+                    <strong>Limited Time:</strong> Founding Partner Program Available
                 </div>
                 
                 <div class="stats">
@@ -1146,12 +648,12 @@
                         <div class="stat-label">Avg crisis cost prevented</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">4</div>
-                        <div class="stat-label">Jurisdictions supported</div>
+                        <div class="stat-number">5-10</div>
+                        <div class="stat-label">Hours saved weekly</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Crisis monitoring</div>
+                        <div class="stat-number">2-3</div>
+                        <div class="stat-label">Years early warning</div>
                     </div>
                 </div>
                 
@@ -1168,7 +670,7 @@
                         <div class="path-icon">📊</div>
                         <div class="path-text">
                             <strong>I'm a Property Manager</strong>
-                            <span>Save time with email templates<br>+ earn partnership revenue</span>
+                            <span>Save time with automation<br>+ earn partnership revenue</span>
                         </div>
                     </a>
                 </div>
@@ -1176,473 +678,116 @@
         </div>
     </section>
 
-    <!-- Quick Product Preview (Moved Higher) -->
-    <section class="quick-preview">
+    <!-- Dual Power Strategy -->
+    <section id="solutions" class="dual-power">
         <div class="container">
-            <h2 class="section-title">See ReserveIQ In Action</h2>
-            <div class="preview-grid">
-                <div class="preview-item">
-                    <div class="mockup-container">
-                        <div class="mockup-header">
-                            <div class="mockup-dots">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <div class="mockup-title">Crisis Prevention Dashboard</div>
-                        </div>
-                        <div class="mockup-content">
-                            <div class="dashboard-header">
-                                <h4>Portfolio Risk Overview</h4>
-                                <span class="status-good">All Systems Monitoring</span>
-                            </div>
-                            <div class="dashboard-grid">
-                                <div class="risk-card high">
-                                    <div class="building-name">Maple Heights (124 units)</div>
-                                    <div class="risk-level">⚠️ Medium Risk</div>
-                                    <div class="timeline">Crisis predicted: Q2 2027</div>
-                                </div>
-                                <div class="risk-card low">
-                                    <div class="building-name">Oak Tower (89 units)</div>
-                                    <div class="risk-level">✅ Healthy</div>
-                                    <div class="timeline">Reserves well-funded</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="preview-item">
-                    <div class="mockup-container">
-                        <div class="mockup-header">
-                            <div class="mockup-dots">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <div class="mockup-title">AI Email Generator</div>
-                        </div>
-                        <div class="mockup-content">
-                            <div class="email-preview">
-                                <div class="email-header">
-                                    <strong>Subject:</strong> Monthly Reserve Update - Dec 2024
-                                </div>
-                                <div class="email-body">
-                                    <p><strong>Reserve Balance:</strong> $145,230<br>
-                                    <strong>Budget Variance:</strong> <span style="color: #10b981;">+2.3%</span></p>
-                                    <p><strong>AI Recommendation:</strong> Increase monthly contributions by $12/unit to maintain optimal funding trajectory...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 2rem;">
-                <p style="color: #64748b; font-size: 1rem;"><strong>Platform starts at approximately $250/month</strong> depending on building size and features selected.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Audience Sections -->
-    <section id="condos" class="audience-section">
-        <div class="container">
-            <h2 class="section-title">Complete Intelligence Platform</h2>
-            <p class="section-subtitle">Two powerful capabilities that transform property management from reactive to strategic</p>
-            <div class="audience-grid">
-                <!-- Daily Operations -->
-                <div class="audience-card">
-                    <div class="audience-icon">📧</div>
-                    <h3 class="audience-title">Daily Operations Excellence</h3>
-                    <p class="audience-description">
-                        Professional AI-powered email templates that transform communication stress into strategic advantage. Generate board-ready emails in 30 seconds.
-                    </p>
-                    <ul class="feature-list">
-                        <li>12 professional email templates</li>
-                        <li>Monthly financial update automation</li>
-                        <li>Compliance deadline warnings</li>
-                        <li>Assessment announcement tools</li>
-                        <li>Emergency communication protocols</li>
-                        <li>Save 5-10 hours weekly</li>
-                    </ul>
-                </div>
-
-                <!-- Crisis Prevention -->
-                <div class="audience-card">
-                    <div class="audience-icon">🎯</div>
-                    <h3 class="audience-title">Crisis Prevention Intelligence</h3>
-                    <p class="audience-description">
-                        AI monitors reserve fund health and predicts financial disasters 2-3 years before they devastate communities. Prevent $50K+ emergency assessments.
-                    </p>
-                    <ul class="feature-list">
-                        <li>Early warning system (2-3 years advance)</li>
-                        <li>Assessment cost calculator</li>
-                        <li>Multi-scenario funding analysis</li>
-                        <li>Board-ready financial presentations</li>
-                        <li>Compliance deadline tracking</li>
-                        <li>Portfolio-wide risk monitoring</li>
-                    </ul>
-                </div>
-
-                <!-- Partnership Revenue -->
-                <div class="audience-card">
-                    <div class="audience-icon">💰</div>
-                    <h3 class="audience-title">Partnership Revenue Stream</h3>
-                    <p class="audience-description">
-                        Property managers earn ongoing commissions by bringing buildings to ReserveIQ. Create new revenue while delivering unmatched value to clients.
-                    </p>
-                    <ul class="feature-list">
-                        <li>$20-30 per building monthly commission</li>
-                        <li>White-labeled client portals</li>
-                        <li>Professional credibility enhancement</li>
-                        <li>Client retention improvement</li>
-                        <li>Founding partner bonuses available</li>
-                        <li>No upfront costs or commitments</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solutions -->
-    <section id="solutions" class="solutions">
-        <div class="container">
-            <h2 class="section-title">Revolutionary Dual-Power Technology</h2>
-            <p class="section-subtitle">The only platform that handles immediate needs while protecting long-term financial health</p>
-            <div class="solutions-grid">
-                <div class="solution-card">
-                    <div class="solution-icon">🤖</div>
-                    <h3 class="solution-title">AI Document Analysis</h3>
-                    <p class="solution-description">Upload reserve studies and get instant AI analysis with risk scoring and actionable insights in under 30 seconds.</p>
-                </div>
-                
-                <div class="solution-card">
-                    <div class="solution-icon">⚠️</div>
-                    <h3 class="solution-title">Predictive Early Warning</h3>
-                    <p class="solution-description">Predict funding gaps 2-3 years before they become emergency assessments. Prevent crises before they devastate communities.</p>
-                </div>
-                
-                <div class="solution-card">
-                    <div class="solution-icon">📧</div>
-                    <h3 class="solution-title">Professional Email Templates</h3>
-                    <p class="solution-description">Generate board-ready financial updates, compliance warnings, and assessment announcements in 30 seconds. Look like a communication expert.</p>
-                </div>
-                
-                <div class="solution-card">
-                    <div class="solution-icon">🧮</div>
-                    <h3 class="solution-title">Assessment Calculator</h3>
-                    <p class="solution-description">Show boards the real cost difference: $35/month vs $6,000 emergency assessment. Visual impact analysis prevents owner shock.</p>
-                </div>
-                
-                <div class="solution-card">
-                    <div class="solution-icon">📊</div>
-                    <h3 class="solution-title">Portfolio Intelligence</h3>
-                    <p class="solution-description">Monitor multiple buildings with unified dashboards, automated reporting, and predictive analytics across your entire portfolio.</p>
-                </div>
-                
-                <div class="solution-card">
-                    <div class="solution-icon">⚖️</div>
-                    <h3 class="solution-title">Multi-Jurisdiction Compliance</h3>
-                    <p class="solution-description">Never miss regulatory deadlines across Ontario, BC, Alberta, Florida, Texas with automated compliance monitoring and penalties tracking.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Showcase -->
-    <section class="product-showcase">
-        <div class="container">
-            <h2 class="section-title">See ReserveIQ in Action</h2>
-            <p class="section-subtitle">Experience the platform that transforms property management from reactive to strategic</p>
+            <h2 class="section-title">Two Ways We Transform Building Management</h2>
+            <p class="section-subtitle">Handle daily stress + Prevent financial disasters. No other platform does both.</p>
             
-            <div class="showcase-grid">
-                <div class="showcase-item">
-                    <div class="mockup-container">
-                        <div class="mockup-header">
-                            <div class="mockup-dots">
-                                <span></span><span></span><span></span>
+            <div class="power-grid">
+                <!-- Daily Operations -->
+                <div class="power-card">
+                    <div class="power-icon">📧</div>
+                    <h3 class="power-title">Daily Operations</h3>
+                    <p class="power-subtitle">Save 5-10 Hours Every Week</p>
+                    <p class="power-description">AI-powered communication tools that make you look like a professional genius. Generate board-ready emails and reports in seconds.</p>
+                    
+                    <div class="power-stats">
+                        <div class="stats-grid">
+                            <div>
+                                <div class="stat-item">Professional</div>
+                                <div class="stat-item-label">Template Library</div>
                             </div>
-                            <div class="mockup-title">Portfolio Risk Dashboard</div>
-                        </div>
-                        <div class="mockup-content">
-                            <div class="dashboard-header">
-                                <h4>Portfolio Health Overview</h4>
-                                <span class="status-good">All Systems Monitoring</span>
-                            </div>
-                            <div class="dashboard-grid">
-                                <div class="risk-card high">
-                                    <div class="building-name">Maple Heights</div>
-                                    <div class="risk-level">⚠️ Medium Risk</div>
-                                    <div class="timeline">Crisis predicted: 2027</div>
-                                </div>
-                                <div class="risk-card low">
-                                    <div class="building-name">Oak Tower</div>
-                                    <div class="risk-level">✅ Low Risk</div>
-                                    <div class="timeline">Reserves healthy</div>
-                                </div>
+                            <div>
+                                <div class="stat-item">30 Sec</div>
+                                <div class="stat-item-label">Generation Time</div>
                             </div>
                         </div>
                     </div>
-                    <h3>Early Warning System</h3>
-                    <p>Monitor reserve health across your entire portfolio with predictive AI alerts</p>
+                    
+                    <a href="#demo" class="power-cta">See Communication Tools</a>
                 </div>
                 
-                <div class="showcase-item">
-                    <div class="mockup-container">
-                        <div class="mockup-header">
-                            <div class="mockup-dots">
-                                <span></span><span></span><span></span>
+                <!-- Crisis Prevention -->
+                <div class="power-card prevention">
+                    <div class="power-icon">🎯</div>
+                    <h3 class="power-title">Crisis Prevention</h3>
+                    <p class="power-subtitle">Prevent $50,000+ Emergency Assessments</p>
+                    <p class="power-description">AI predicts reserve fund crises 2-3 years before they devastate owners. No other platform offers this protection.</p>
+                    
+                    <div class="power-stats">
+                        <div class="stats-grid">
+                            <div>
+                                <div class="stat-item">2-3</div>
+                                <div class="stat-item-label">Years Early Warning</div>
                             </div>
-                            <div class="mockup-title">AI Email Generator</div>
-                        </div>
-                        <div class="mockup-content">
-                            <div class="email-preview">
-                                <div class="email-header">
-                                    <strong>To:</strong> board@mapleheights.ca<br>
-                                    <strong>Subject:</strong> Monthly Reserve Fund Update - Dec 2024
-                                </div>
-                                <div class="email-body">
-                                    <p>Dear Board Members,</p>
-                                    <p>Current Reserve Balance: <strong>$145,230</strong><br>
-                                    Variance from Budget: <strong style="color: #10b981;">+2.3%</strong></p>
-                                    <p><strong>AI Recommendation:</strong> Increase monthly contributions by $12/unit to maintain optimal funding...</p>
-                                </div>
+                            <div>
+                                <div class="stat-item">92%</div>
+                                <div class="stat-item-label">Prediction Accuracy</div>
                             </div>
                         </div>
                     </div>
-                    <h3>Professional Email Templates</h3>
-                    <p>Generate board-ready financial updates and communications in 30 seconds</p>
+                    
+                    <a href="#demo" class="power-cta">See Crisis Prevention</a>
                 </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #f8fafc; border-radius: 12px;">
+                <h4 style="color: #1e3a8a; font-size: 1.3rem; margin-bottom: 1rem;">Why This Combination Is Unbeatable</h4>
+                <p style="color: #64748b; font-size: 1.1rem;">Communication tools get you immediate results. Crisis prevention creates unbreakable client loyalty. Together, they make you irreplaceable.</p>
             </div>
         </div>
     </section>
 
-    <!-- Why We Built This -->
-    <section class="vision-section">
-        <div class="container">
-            <div class="vision-content">
-                <div class="vision-text">
-                    <h2 class="section-title">Why We Built ReserveIQ</h2>
-                    <p class="vision-quote">"Property management companies are under immense pressure to do more with less. We believe software should not only save time but protect communities from financial disaster. ReserveIQ is built to make proactive management the standard."</p>
-                    <div class="vision-points">
-                        <div class="vision-point">
-                            <span class="point-icon">🎯</span>
-                            <span>Transform reactive crisis management into predictive intelligence</span>
-                        </div>
-                        <div class="vision-point">
-                            <span class="point-icon">⚡</span>
-                            <span>Save property managers hours weekly with professional automation</span>
-                        </div>
-                        <div class="vision-point">
-                            <span class="point-icon">🛡️</span>
-                            <span>Protect communities from devastating financial emergencies</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="vision-image">
-                    <div class="credibility-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">15+</div>
-                            <div class="stat-label">Years PM Experience</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">AI</div>
-                            <div class="stat-label">OpenAI-Powered</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">SOC 2</div>
-                            <div class="stat-label">Security Compliant</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Story -->
-    <section class="story-section">
-        <div class="container">
-            <h2 class="section-title">Our Story</h2>
-            <div class="story-content">
-                <p class="story-text">ReserveIQ was created by a team of property management professionals and technology leaders who saw a critical gap in the market. After decades working with condo boards and PM firms, we realized most platforms only solved part of the problem.</p>
-                <p class="story-text">Traditional systems focus on basic operations but leave property managers vulnerable to crisis situations that devastate client relationships. Meanwhile, property managers waste hours crafting emails that should take minutes.</p>
-                <p class="story-mission"><strong>Our mission:</strong> Give every property manager and board the tools to operate proactively—not reactively. Combine daily efficiency with long-term protection.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Roadmap -->
-    <section class="roadmap-section">
-        <div class="container">
-            <h2 class="section-title">Where We're Headed</h2>
-            <p class="section-subtitle">Clear milestones, proven commitment to success</p>
-            <div class="roadmap-timeline">
-                <div class="timeline-item completed">
-                    <div class="timeline-icon">✅</div>
-                    <div class="timeline-content">
-                        <h3>Platform MVP Complete</h3>
-                        <p>Email templates + Crisis prevention AI launched</p>
-                        <span class="timeline-date">June 2025</span>
-                    </div>
-                </div>
-                <div class="timeline-item active">
-                    <div class="timeline-icon">🚀</div>
-                    <div class="timeline-content">
-                        <h3>Founding Partner Program</h3>
-                        <p>Special pricing + revenue share for early adopters</p>
-                        <span class="timeline-date">July 2025</span>
-                    </div>
-                </div>
-                <div class="timeline-item future">
-                    <div class="timeline-icon">🌎</div>
-                    <div class="timeline-content">
-                        <h3>Multi-Jurisdiction Expansion</h3>
-                        <p>Adding 3 more jurisdictions (Florida, Texas, Alberta)</p>
-                        <span class="timeline-date">Q4 2025</span>
-                    </div>
-                </div>
-                <div class="timeline-item future">
-                    <div class="timeline-icon">🤖</div>
-                    <div class="timeline-content">
-                        <h3>Advanced AI Features</h3>
-                        <p>Predictive maintenance alerts + Market benchmarking</p>
-                        <span class="timeline-date">2026</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Enhanced Founding Partner Benefits -->
-    <section class="founding-partner-section">
-        <div class="container">
-            <h2 class="section-title">Founding Partner Advantages</h2>
-            <p class="section-subtitle">Join now and lock in exclusive benefits that won't be available later</p>
-            <div class="benefits-grid">
-                <div class="benefit-card featured">
-                    <div class="benefit-icon">🔒</div>
-                    <h3>Lifetime Pricing Lock</h3>
-                    <p>Your founding partner rate never increases—guaranteed for life</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🎤</div>
-                    <h3>Priority Feature Input</h3>
-                    <p>Direct line to our development team for feature requests</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🚀</div>
-                    <h3>Dedicated Onboarding</h3>
-                    <p>Personal setup assistance and training for your entire team</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">💰</div>
-                    <h3>Enhanced Revenue Share</h3>
-                    <p>15% bonus on top of standard commission rates</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">⭐</div>
-                    <h3>Founding Partner Status</h3>
-                    <p>Recognition as a founding partner in all marketing materials</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🎯</div>
-                    <h3>First Access to New Features</h3>
-                    <p>Beta access to all new capabilities before general release</p>
-                </div>
-            </div>
-            <div class="urgency-note">
-                <p><strong>Limited Time:</strong> Only the first 50 partners receive founding partner status. <strong>23 spots remaining.</strong></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>Is there a long-term contract?</h3>
-                    <p>No—cancel anytime with 30 days notice. We earn your business every month.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How long does onboarding take?</h3>
-                    <p>Most clients are live in under 7 days. Founding partners get dedicated support for even faster setup.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How is data secured?</h3>
-                    <p>All documents are stored in encrypted, SOC 2 compliant infrastructure with bank-level security.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What jurisdictions do you support?</h3>
-                    <p>Currently Ontario, BC, and Alberta. Florida and Texas launching Q4 2025. Additional provinces and states available upon request.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Who owns the data if we cancel?</h3>
-                    <p>You own your data completely. We provide secure export on request and delete all data within 30 days of cancellation.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Do I need technical expertise?</h3>
-                    <p>No technical knowledge required. Our AI handles the complexity—you get simple, actionable insights.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Can I white-label the platform?</h3>
-                    <p>Yes, property manager partners get fully branded client portals with their company colors and logo.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Have questions?</h3>
-                    <p>Email us anytime at <strong>support@reserveiq.net</strong> — we typically respond within 4 hours during business days.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Competitive Advantage -->
-    <section class="advantage">
+    <!-- Why Different -->
+    <section class="why-different">
         <div class="container">
             <h2 class="section-title">Why ReserveIQ Dominates Traditional Platforms</h2>
             <div class="advantage-grid">
                 <div class="advantage-item">
                     <div class="advantage-icon">🎯</div>
                     <h3 class="advantage-title">Dual-Power Strategy</h3>
-                    <p class="advantage-description">While Yardi and Buildium focus on basic operations, we combine daily efficiency with crisis prevention. No other platform does both.</p>
+                    <p class="advantage-description">While others focus on basic operations, we combine daily efficiency with crisis prevention. No other platform does both.</p>
                 </div>
                 
                 <div class="advantage-item">
                     <div class="advantage-icon">🤖</div>
                     <h3 class="advantage-title">AI-First Intelligence</h3>
-                    <p class="advantage-description">Built with OpenAI-powered models and compliance standards inspired by CAI and ACMO. Traditional platforms are manual and reactive.</p>
+                    <p class="advantage-description">Built with advanced AI models and compliance standards. Traditional platforms are manual and reactive.</p>
                 </div>
                 
                 <div class="advantage-item">
                     <div class="advantage-icon">💰</div>
                     <h3 class="advantage-title">Partner Revenue Model</h3>
-                    <p class="advantage-description">Property managers earn $20-30 per building monthly. Traditional platforms take your money — we share our revenue with partners who bring value.</p>
+                    <p class="advantage-description">Property managers earn recurring commissions. Traditional platforms take your money — we share our revenue with partners.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Demo Section -->
-    <section id="demo-form" class="demo-section">
+    <section id="demo" class="demo-section">
         <div class="container">
             <h2 class="section-title">Experience ReserveIQ Intelligence</h2>
             <p class="section-subtitle">Choose your path to see how we transform property management</p>
             <div class="demo-options">
-                <div id="board-demo" class="demo-option">
+                <div class="demo-option">
                     <div class="demo-icon">🏢</div>
                     <h3>Board Members & Building Owners</h3>
-                    <p>Upload your reserve study for instant AI analysis and crisis prevention recommendations</p>
+                    <p>Get instant crisis prevention analysis and professional communication tools</p>
                     <form class="demo-form">
                         <input type="text" placeholder="Building Name" required>
                         <input type="email" placeholder="Your Email" required>
                         <input type="text" placeholder="Number of Units">
-                        <div class="file-upload">
-                            <label for="reserve-study">Upload Reserve Study (Optional)</label>
-                            <input type="file" id="reserve-study" accept=".pdf,.doc,.docx">
-                        </div>
                         <button type="submit" class="submit-btn">Get Free Crisis Analysis</button>
+                        <p style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem; text-align: center;"><strong>We respond within 24 hours</strong></p>
                     </form>
                 </div>
                 
-                <div id="pm-demo" class="demo-option">
+                <div class="demo-option">
                     <div class="demo-icon">📊</div>
                     <h3>Property Management Companies</h3>
-                    <p>Explore partnership opportunities, email templates, and revenue sharing potential</p>
+                    <p>Explore partnership opportunities, automation tools, and revenue sharing potential</p>
                     <form class="demo-form">
                         <input type="text" placeholder="Company Name" required>
                         <input type="text" placeholder="Contact Name" required>
@@ -1650,12 +795,13 @@
                         <input type="text" placeholder="Number of Buildings Managed">
                         <select required>
                             <option value="">Primary Interest</option>
-                            <option value="email-templates">Email Templates Demo</option>
+                            <option value="automation">Communication Automation</option>
                             <option value="revenue-sharing">Revenue Sharing Details</option>
                             <option value="crisis-prevention">Crisis Prevention Platform</option>
                             <option value="founding-partner">Founding Partner Program</option>
                         </select>
                         <button type="submit" class="submit-btn">Schedule Partnership Demo</button>
+                        <p style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem; text-align: center;"><strong>We respond within 24 hours</strong></p>
                     </form>
                 </div>
             </div>
